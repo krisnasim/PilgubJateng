@@ -3,6 +3,7 @@ package id.mdh.pilgubjateng.activity;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import butterknife.BindView;
@@ -21,5 +22,6 @@ public class MainActivity extends AppCompatActivity {
 
         //testTest.setText("Saya kotak");
         testTest.setTextColor(Color.RED);
+        testTest.setVisibility(View.INVISIBLE);
     }
 }
