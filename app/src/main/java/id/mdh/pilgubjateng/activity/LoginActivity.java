@@ -25,7 +25,7 @@ public class LoginActivity extends AppCompatActivity {
         String passText = input_pass.getText().toString();
         //check if input is right
         if(emailText.equals("admin") && passText.equals("admin")) {
-            Intent intent = new Intent(this, MainActivity.class);
+            Intent intent = new Intent(this, HomeActivity.class);
             startActivity(intent);
         }
         else {
