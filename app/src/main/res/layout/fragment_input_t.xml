@@ -1,0 +1,191 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="id.mdh.pilgubjateng.fragment.InputTPSFragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kelurahan/Desa"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="17dp"
+                android:layout_marginStart="30dp"/>
+
+            <EditText
+                android:id="@+id/editText10"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="34dp"
+                android:layout_below="@id/textView11"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Nama Kelurahan/Desa"
+                android:layout_alignStart="@id/textView11"/>
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nomor TPS"
+                android:layout_marginTop="14dp"
+                android:layout_below="@+id/editText10"
+                android:layout_alignStart="@+id/editText10" />
+
+            <EditText
+                android:id="@+id/editText11"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Nomor TPS"
+                android:layout_below="@+id/editText10"
+                android:layout_alignStart="@+id/editText10"
+                android:layout_marginTop="30dp" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jumlah Peserta TPS"
+                android:layout_below="@+id/editText11"
+                android:layout_alignStart="@+id/editText11"
+                android:layout_marginTop="14dp" />
+
+            <EditText
+                android:id="@+id/editText12"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Jumlah Peserta TPS"
+                android:layout_below="@+id/editText11"
+                android:layout_alignStart="@+id/editText11" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pasangan Calon 1"
+                android:layout_marginTop="14dp"
+                android:layout_below="@+id/editText12"
+                android:layout_alignStart="@+id/editText12" />
+
+            <EditText
+                android:id="@+id/editText13"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Nama Pasangan"
+                android:layout_below="@+id/editText12"
+                android:layout_alignStart="@+id/editText12" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pasangan Calon 2"
+                android:layout_marginTop="14dp"
+                android:layout_below="@+id/editText13"
+                android:layout_alignStart="@+id/editText13" />
+
+            <EditText
+                android:id="@+id/editText14"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Nama Pasangan"
+                android:layout_below="@+id/editText13"
+                android:layout_alignStart="@+id/editText13" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pasangan Calon 3"
+                android:layout_marginTop="14dp"
+                android:layout_below="@+id/editText14"
+                android:layout_alignStart="@+id/editText14" />
+
+            <EditText
+                android:id="@+id/editText15"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Nama Pasangan"
+                android:layout_below="@+id/editText14"
+                android:layout_alignStart="@+id/editText14" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jumlah Suara Tidak Sah"
+                android:layout_marginTop="14dp"
+                android:layout_below="@+id/editText15"
+                android:layout_alignStart="@+id/editText15" />
+
+            <EditText
+                android:id="@+id/editText16"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Jumlah Suara"
+                android:layout_below="@+id/editText15"
+                android:layout_alignStart="@+id/editText15" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bukti Foto"
+                android:layout_marginTop="14dp"
+                android:layout_below="@+id/editText16"
+                android:layout_alignStart="@+id/editText16" />
+
+            <Button
+                android:id="@+id/upload_photo_input_data_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editText16"
+                android:layout_alignStart="@id/editText16"
+                android:background="@color/colorAccent"
+                android:textColor="#ffffff"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="200dp"
+                android:text="Unggah"/>
+
+            <Button
+                android:id="@+id/input_data_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/upload_photo_input_data_button"
+                android:background="@color/colorAccent"
+                android:textColor="#ffffff"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:layout_centerHorizontal="true"
+                android:text="Kirim"/>
+
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

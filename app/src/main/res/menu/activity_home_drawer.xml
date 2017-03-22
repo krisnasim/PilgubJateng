@@ -3,34 +3,28 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
+            android:id="@+id/nav_beranda"
+            android:icon="@drawable/ic_beranda"
+            android:title="Beranda" />
+        <item
+            android:id="@+id/nav_regis_tps"
             android:icon="@drawable/ic_regis_tps"
             android:title="Registrasi TPS" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_catat_tps"
             android:icon="@drawable/ic_catat_data_tps"
             android:title="Catat Data TPS" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_rekam_tps"
             android:icon="@drawable/ic_rekam_data_tps"
             android:title="Rekam Data TPS" />
         <item
-            android:id="@+id/nav_manage"
+            android:id="@+id/nav_profil"
             android:icon="@drawable/ic_profil"
             android:title="Lihat Profil" />
         <item
-            android:id="@+id/nav_share"
+            android:id="@+id/nav_logout"
             android:icon="@drawable/ic_logout"
             android:title="Logout" />
     </group>
-
-    <item android:title="Communicate">
-        <menu>
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
-        </menu>
-    </item>
-
 </menu>
