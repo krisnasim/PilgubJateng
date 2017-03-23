@@ -9,11 +9,11 @@
         <item
             android:id="@+id/nav_regis_tps"
             android:icon="@drawable/ic_regis_tps"
-            android:title="Registrasi TPS" />
+            android:title="Registrasi Pers Pam TPS" />
         <item
             android:id="@+id/nav_catat_tps"
             android:icon="@drawable/ic_catat_data_tps"
-            android:title="Catat Data TPS" />
+            android:title="Hasil Rekap TPS" />
         <item
             android:id="@+id/nav_rekam_tps"
             android:icon="@drawable/ic_rekam_data_tps"

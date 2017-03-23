@@ -1,11 +1,8 @@
 package id.mdh.pilgubjateng.fragment;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,7 +16,6 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import id.mdh.pilgubjateng.R;
 import id.mdh.pilgubjateng.activity.HomeActivity;
-import id.mdh.pilgubjateng.activity.MainActivity;
 import id.mdh.pilgubjateng.customclass.CustomGridMenu;
 
 public class HomeFragment extends Fragment {
@@ -52,8 +48,8 @@ public class HomeFragment extends Fragment {
         getActivity().setTitle("Beranda");
 
         //adding up some items for grid menu
-        web.add("Registrasi TPS");
-        web.add("Catat Data TPS");
+        web.add("Registrasi Pers Pam TPS");
+        web.add("Hasil Rekap TPS");
         web.add("Rekam Data TPS");
         web.add("Lihat Profil");
 

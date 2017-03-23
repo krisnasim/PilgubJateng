@@ -5,6 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
     tools:context="id.mdh.pilgubjateng.activity.LoginActivity">
 
     <ImageView
@@ -19,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="55dp" />
 
-    <!-- Email Label -->
+    <!-- NRP Label -->
     <android.support.design.widget.TextInputLayout
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -37,12 +39,12 @@
             android:id="@+id/input_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email"
+            android:hint="NRP"
             android:textColor="@color/White"
             android:inputType="textEmailAddress" />
     </android.support.design.widget.TextInputLayout>
 
-    <!-- Email Label -->
+    <!-- Password Label -->
     <android.support.design.widget.TextInputLayout
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
