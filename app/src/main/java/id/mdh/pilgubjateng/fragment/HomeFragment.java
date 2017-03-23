@@ -3,6 +3,7 @@ package id.mdh.pilgubjateng.fragment;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,7 +11,16 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
 
+import com.github.mikephil.charting.charts.HorizontalBarChart;
+import com.github.mikephil.charting.components.Legend;
+import com.github.mikephil.charting.components.XAxis;
+import com.github.mikephil.charting.components.YAxis;
+import com.github.mikephil.charting.data.BarData;
+import com.github.mikephil.charting.data.BarDataSet;
+import com.github.mikephil.charting.data.BarEntry;
+
 import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -25,6 +35,7 @@ public class HomeFragment extends Fragment {
     private ArrayList<Integer> imageID = new ArrayList<Integer>();
 
     @BindView(R.id.grid_home_menu) GridView grid_home_menu;
+    @BindView(R.id.topHomeChart) HorizontalBarChart topHomeChart;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -46,6 +57,56 @@ public class HomeFragment extends Fragment {
         act = (HomeActivity) getActivity();
         ButterKnife.bind(this, view);
         getActivity().setTitle("Beranda");
+
+        // in this example, a LineChart is initialized from xml
+        //BarChart chart = (BarChart) getActivity().findViewById(R.id.topHomeChart);
+        //adding dummy data
+        int[] dataObjects = {123, 667, 456};
+        int[] numberData = {1, 2, 3};
+        //List<Integer> colors = new ArrayList<Integer>();
+        int[] colors = {
+                            ContextCompat.getColor(getActivity(), R.color.colorPrimaryDark),
+                            ContextCompat.getColor(getActivity(), R.color.colorPrimary),
+                            ContextCompat.getColor(getActivity(), R.color.DarkRedMaterial)
+                        };
+
+        //adding the data into chart obj
+        List<BarEntry> entries = new ArrayList<BarEntry>();
+
+        for (int x=0; x<numberData.length; x++) {
+
+            // turn your data into Entry objects
+            entries.add(new BarEntry(numberData[x], dataObjects[x]));
+        }
+
+        BarDataSet dataSet = new BarDataSet(entries, "Suara jumlah Paslon"); // add entries to dataset
+        //dataSet.setValueTextColors(colors);
+        dataSet.setColors(colors);
+        //dataSet.setValueTextColor(...); // styling, ...
+
+        BarData barData = new BarData(dataSet);
+        topHomeChart.setData(barData);
+        topHomeChart.setBorderColor(ContextCompat.getColor(getActivity(),R.color.colorPrimaryDark));
+        topHomeChart.setGridBackgroundColor(ContextCompat.getColor(getActivity(), R.color.White));
+        topHomeChart.setDrawValueAboveBar(true);
+        //topHomeChart.setBackgroundColor(ContextCompat.getColor(getActivity(), R.color.White));
+        topHomeChart.invalidate(); // refresh
+        topHomeChart.animateY(3000);
+        topHomeChart.setDoubleTapToZoomEnabled(false);
+
+        //set up x and y axis, and legend color
+
+        XAxis xAxis = topHomeChart.getXAxis();
+        xAxis.setAxisLineColor(ContextCompat.getColor(getActivity(), R.color.White));
+        xAxis.setTextColor(ContextCompat.getColor(getActivity(), R.color.White));
+
+        YAxis yAxis = topHomeChart.getAxisRight();
+        yAxis.setAxisLineColor(ContextCompat.getColor(getActivity(), R.color.White));
+        yAxis.setTextColor(ContextCompat.getColor(getActivity(), R.color.White));
+
+
+        Legend legend = topHomeChart.getLegend();
+        legend.setTextColor(ContextCompat.getColor(getActivity(), R.color.White));
 
         //adding up some items for grid menu
         web.add("Registrasi Pers Pam TPS");

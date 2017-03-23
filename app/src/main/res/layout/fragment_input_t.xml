@@ -1,7 +1,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/menu_bg"
     tools:context="id.mdh.pilgubjateng.fragment.InputTPSFragment">
     <ScrollView
         android:layout_width="match_parent"
@@ -77,7 +79,7 @@
                 android:id="@+id/textView14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pasangan Calon 1"
+                android:text="Jumlah Suara Pasangan Calon 1"
                 android:layout_marginTop="14dp"
                 android:layout_below="@+id/editText12"
                 android:layout_alignStart="@+id/editText12" />
@@ -88,8 +90,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="Nama Pasangan"
+                android:inputType="number"
+                android:text="3778"
                 android:layout_below="@+id/editText12"
                 android:layout_alignStart="@+id/editText12" />
 
@@ -97,7 +99,7 @@
                 android:id="@+id/textView15"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pasangan Calon 2"
+                android:text="Jumlah Suara Pasangan Calon 2"
                 android:layout_marginTop="14dp"
                 android:layout_below="@+id/editText13"
                 android:layout_alignStart="@+id/editText13" />
@@ -108,8 +110,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="Nama Pasangan"
+                android:inputType="number"
+                android:text="2109"
                 android:layout_below="@+id/editText13"
                 android:layout_alignStart="@+id/editText13" />
 
@@ -117,7 +119,7 @@
                 android:id="@+id/textView16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pasangan Calon 3"
+                android:text=" Jumlah Suara Pasangan Calon 3"
                 android:layout_marginTop="14dp"
                 android:layout_below="@+id/editText14"
                 android:layout_alignStart="@+id/editText14" />
@@ -128,8 +130,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="Nama Pasangan"
+                android:inputType="number"
+                android:text="787"
                 android:layout_below="@+id/editText14"
                 android:layout_alignStart="@+id/editText14" />
 
@@ -148,8 +150,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="Jumlah Suara"
+                android:inputType="number"
+                android:text="69"
                 android:layout_below="@+id/editText15"
                 android:layout_alignStart="@+id/editText15" />
 
@@ -162,29 +164,39 @@
                 android:layout_below="@+id/editText16"
                 android:layout_alignStart="@+id/editText16" />
 
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:srcCompat="@drawable/upload_default"
+                android:layout_alignTop="@+id/upload_photo_input_data_button"
+                android:layout_alignStart="@+id/textView18" />
+
             <Button
                 android:id="@+id/upload_photo_input_data_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/editText16"
-                android:layout_alignStart="@id/editText16"
+                android:layout_alignStart="@id/imageView2"
                 android:background="@color/colorAccent"
                 android:textColor="#ffffff"
                 android:layout_marginTop="40dp"
-                android:layout_marginLeft="200dp"
+                android:layout_marginLeft="180dp"
                 android:text="Unggah"/>
 
             <Button
                 android:id="@+id/input_data_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/upload_photo_input_data_button"
+                android:layout_below="@id/imageView2"
                 android:background="@color/colorAccent"
                 android:textColor="#ffffff"
                 android:layout_marginTop="30dp"
                 android:layout_marginBottom="30dp"
                 android:layout_centerHorizontal="true"
                 android:text="Kirim"/>
+
+
 
         </RelativeLayout>
     </ScrollView>

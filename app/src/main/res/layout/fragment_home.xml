@@ -7,23 +7,29 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="250dp"
+        android:layout_width="280dp"
         android:layout_height="wrap_content"
         android:text="Quickcount Pilgub Jateng"
         android:textAlignment="center"
-        android:textSize="30sp"
+        android:textSize="24sp"
         android:textColor="@color/White"
-        android:layout_marginTop="47dp"
+        android:layout_marginTop="25dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
+
+    <com.github.mikephil.charting.charts.HorizontalBarChart
+        android:id="@+id/topHomeChart"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@id/textView2" />
 
     <GridView
         android:id="@+id/grid_home_menu"
         android:layout_width="match_parent"
         android:layout_height="250dp"
+        android:layout_marginTop="30dp"
         android:numColumns="2"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="100dp" />
+        android:layout_below="@+id/topHomeChart"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

@@ -6,8 +6,6 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="colorControlActivated">@color/colorPrimaryDark</item>
-        <item name="colorControlNormal">#ffffff</item>
     </style>
 
     <style name="NoActionBar" parent="AppTheme">
@@ -16,6 +14,13 @@
     </style>
 
     <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="LoginTheme" parent="AppTheme">
+        <item name="colorControlActivated">@color/colorPrimaryDark</item>
+        <item name="colorControlNormal">#ffffff</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
