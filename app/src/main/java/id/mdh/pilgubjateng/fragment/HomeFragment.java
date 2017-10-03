@@ -141,6 +141,9 @@ public class HomeFragment extends Fragment {
 
                 if (act != null) // Make sure we are attached
                 {
+                    web.clear();
+                    imageID.clear();
+                    grid_home_menu.setAdapter(null);
                     act.changeFragment(fragment);
                 }
                 else {

@@ -18,6 +18,8 @@ public class LoginActivity extends AppCompatActivity {
     @BindView(R.id.input_pass) EditText input_pass;
     @BindView(R.id.login_button) Button login_button;
 
+    private boolean firstLogin = false;
+
     @OnClick(R.id.login_button)
     public void login() {
         //get value from both email and password field first
@@ -25,8 +27,20 @@ public class LoginActivity extends AppCompatActivity {
         String passText = input_pass.getText().toString();
         //check if input is right
         if(emailText.equals("10101") && passText.equals("admin")) {
-            Intent intent = new Intent(this, HomeActivity.class);
-            startActivity(intent);
+            //clean the field first
+            input_email.setText("");
+            input_pass.setText("");
+
+            //prompt to change password if login for first time
+            if(firstLogin) {
+                Intent intent = new Intent(this, NewPasswordActivity.class);
+                startActivity(intent);
+                finish();
+            } else {
+                Intent intent = new Intent(this, HomeActivity.class);
+                startActivity(intent);
+                finish();
+            }
         }
         else {
             Toast.makeText(this, "Anda memasukan username atau kata sandi yang salah. Silahkan coba kembali", Toast.LENGTH_SHORT).show();

@@ -8,20 +8,16 @@
             android:title="Beranda" />
         <item
             android:id="@+id/nav_regis_tps"
-            android:icon="@drawable/ic_regis_tps"
-            android:title="Registrasi Pers Pam TPS" />
+            android:icon="@drawable/ic_direktif"
+            android:title="Direktif / Info" />
         <item
             android:id="@+id/nav_catat_tps"
             android:icon="@drawable/ic_catat_data_tps"
-            android:title="Hasil Rekap TPS" />
+            android:title="Lapor Hasil Pungut Suara" />
         <item
             android:id="@+id/nav_rekam_tps"
             android:icon="@drawable/ic_rekam_data_tps"
-            android:title="Rekam Data TPS" />
-        <item
-            android:id="@+id/nav_profil"
-            android:icon="@drawable/ic_profil"
-            android:title="Lihat Profil" />
+            android:title="Rekam Hasil Laporan Pungut Suara" />
         <item
             android:id="@+id/nav_logout"
             android:icon="@drawable/ic_logout"
