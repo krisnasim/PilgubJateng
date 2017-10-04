@@ -1,35 +1,204 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/bg_darker"
-    tools:context="id.mdh.pilgubjateng.fragment.HomeFragment">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="280dp"
-        android:layout_height="wrap_content"
-        android:text="Quickcount Pilgub Jateng"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        android:textColor="@color/White"
-        android:layout_marginTop="25dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
-    <com.github.mikephil.charting.charts.HorizontalBarChart
-        android:id="@+id/topHomeChart"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_below="@id/textView2" />
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_darker"
+        tools:context="id.mdh.pilgubjateng.fragment.HomeFragment">
 
-    <GridView
-        android:id="@+id/grid_home_menu"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:layout_marginTop="30dp"
-        android:numColumns="2"
-        android:layout_below="@+id/topHomeChart"
-        android:layout_alignParentStart="true" />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/avatar_profile"
+            android:layout_marginTop="27dp"
+            android:id="@+id/circleImageView"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/textView2"
+            android:layout_marginStart="29dp" />
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/circleImageView"
+            android:layout_marginStart="14dp"
+            android:layout_toEndOf="@+id/circleImageView"
+            android:text="BRIPKA JOJO"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/textView23"
+            android:layout_below="@+id/textView23"
+            android:layout_marginTop="10dp"
+            android:text="Penugasan :"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/textView24"
+            android:layout_below="@+id/textView24"
+            android:layout_marginTop="10dp"
+            android:text="DESA KEBON JERUK"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="250dp"
+            android:entries="@array/region"
+            android:layout_centerHorizontal="true"
+            android:layout_height="60dp"
+            android:layout_below="@+id/textView25"
+            android:layout_marginTop="30dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:text="Quickcount Pilgub Jateng"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textColor="@color/White"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/spinner"
+            android:layout_centerHorizontal="true" />
+
+        <com.github.mikephil.charting.charts.HorizontalBarChart
+            android:id="@+id/topHomeChart"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@id/textView2" />
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view_direktif"
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:layout_alignParentStart="true"
+            card_view:cardBackgroundColor="@android:color/transparent"
+            android:layout_below="@+id/topHomeChart"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/card_view_bg">
+
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@drawable/ic_direktif_white" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageView"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:text="Direktif / Info"
+                    android:textColor="@android:color/white" />
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view_laporan_pungut_suara"
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:layout_alignTop="@+id/card_view_direktif"
+            card_view:cardBackgroundColor="@android:color/transparent"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@+id/card_view_direktif">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/card_view_bg">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@drawable/ic_rekam_data_tps_white" />
+
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageView3"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:text="Rekam Hasil Laporan Pungut Suara"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="10sp" />
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view_pungut_suara"
+            android:layout_width="320dp"
+            android:layout_height="80dp"
+            card_view:cardBackgroundColor="@android:color/transparent"
+            android:layout_below="@+id/card_view_direktif"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="50dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/card_view_bg">
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    app:srcCompat="@drawable/ic_catat_data_tps_white"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp" />
+
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageView4"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="3dp"
+                    android:text="Lapor Hasil Pungut Suara"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="10sp" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+</ScrollView>

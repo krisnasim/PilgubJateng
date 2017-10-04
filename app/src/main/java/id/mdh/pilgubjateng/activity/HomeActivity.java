@@ -39,10 +39,9 @@ import id.mdh.pilgubjateng.fragment.RegistrationTPSFragment;
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    @BindView(R.id.name_header_view) TextView name_header_view;
-    @BindView(R.id.nrp_header_view) TextView nrp_header_view;
-
     private FragmentManager manager;
+    private TextView name_header_view;
+    private TextView nrp_header_view;
     private FragmentTransaction transaction;
 
     @Override
@@ -64,6 +63,12 @@ public class HomeActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        View headerView = navigationView.getHeaderView(0);
+        name_header_view = ButterKnife.findById(headerView, R.id.name_header_view);
+        nrp_header_view = ButterKnife.findById(headerView, R.id.nrp_header_view);
+
+        name_header_view.setText("Jonathan Simananda");
+        nrp_header_view.setText("11012356");
     }
 
     @Override

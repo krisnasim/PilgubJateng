@@ -1,8 +1,11 @@
 package id.mdh.pilgubjateng.activity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -30,6 +33,13 @@ public class LoginActivity extends AppCompatActivity {
             //clean the field first
             input_email.setText("");
             input_pass.setText("");
+
+//            // Check if no view has focus:
+//            View view = this.getCurrentFocus();
+//            if (view != null) {
+//                InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+//                imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+//            }
 
             //prompt to change password if login for first time
             if(firstLogin) {
