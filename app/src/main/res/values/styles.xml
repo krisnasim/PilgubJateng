@@ -25,6 +25,13 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <!-- Style for Material Dialog -->
+    <style name="CustomDialog" parent="Base.Theme.AppCompat.Light.Dialog.MinWidth">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="colorAccent">@color/White</item>
+        <item name="android:textColor">@color/White</item>
+    </style>
+
     <style name="TextAppearence.App.TextInputLayout" parent="@android:style/TextAppearance">
         <item name="android:textColor">@color/colorPrimaryDark</item>
     </style>

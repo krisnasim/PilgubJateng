@@ -7,7 +7,7 @@
     android:background="@drawable/bg"
     android:focusable="true"
     android:focusableInTouchMode="true"
-    tools:context="id.mdh.pilgubjateng.activity.LoginActivity">
+    tools:context="com.count.cakep.activity.LoginActivity">
 
     <ImageView
         android:id="@+id/app_logo"

@@ -14,7 +14,7 @@
 
     <!-- Starting Point -->
     <TextView
-        android:id="@+id/startPoint"
+        android:id="@+id/vote_location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
@@ -33,8 +33,8 @@
         android:textSize="12sp"
         android:paddingLeft="10dp"
         android:text="Forum Created"
-        android:layout_below="@+id/startPoint"
-        android:layout_alignStart="@+id/startPoint" />
+        android:layout_below="@+id/vote_location"
+        android:layout_alignStart="@+id/vote_location" />
 
     <!-- Distance -->
     <TextView
@@ -50,7 +50,7 @@
 
     <!-- Start Date -->
     <TextView
-        android:id="@+id/StartDate"
+        android:id="@+id/vote_datetime"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/Distance"

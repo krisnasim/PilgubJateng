@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.count.cakep.activity.EditInputTPSDetailActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/edit_nama_personil_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="17dp"
+                android:text="Nama Lengkap Personil" />
+
+            <EditText
+                android:id="@+id/edit_nama_personil"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignStart="@id/edit_nama_personil_label"
+                android:layout_below="@id/edit_nama_personil_label"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="34dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Bripka Jonathan" />
+
+            <TextView
+                android:id="@+id/edit_nrp_personil_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edit_nama_personil"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="17dp"
+                android:text="NRP Personil" />
+
+            <EditText
+                android:id="@+id/edit_nrp_personil"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/edit_nrp_personil_label"
+                android:layout_below="@id/edit_nrp_personil_label"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="0dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="11011234" />
+
+            <TextView
+                android:id="@+id/edit_lokasi_pungut_suara_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/edit_nrp_personil"
+                android:layout_below="@+id/edit_nrp_personil"
+                android:layout_marginTop="14dp"
+                android:text="Laporan hasil pungut suara pada:" />
+
+            <Spinner
+                android:id="@+id/edit_spinner_lokasi_pungut_suara"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_alignStart="@id/edit_lokasi_pungut_suara_label"
+                android:layout_below="@id/edit_lokasi_pungut_suara_label" />
+
+            <TextView
+                android:id="@+id/edit_jumlah_dpt_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/edit_spinner_lokasi_pungut_suara"
+                android:layout_below="@+id/edit_spinner_lokasi_pungut_suara"
+                android:layout_marginTop="14dp"
+                android:text="Jumlah DPT berdasarkan KPUD" />
+
+            <EditText
+                android:id="@+id/edit_jumlah_dpt"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/edit_spinner_lokasi_pungut_suara"
+                android:layout_below="@+id/edit_spinner_lokasi_pungut_suara"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="289" />
+
+            <TextView
+                android:id="@+id/edit_jumlah_pemilih_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/edit_jumlah_dpt"
+                android:layout_below="@+id/edit_jumlah_dpt"
+                android:layout_marginTop="14dp"
+                android:text="Laporan jumlah pemilih" />
+
+            <EditText
+                android:id="@+id/edit_jumlah_pemilih"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text="3778"
+                android:layout_below="@+id/edit_jumlah_dpt"
+                android:layout_alignStart="@+id/edit_jumlah_dpt" />
+
+
+            <LinearLayout
+                android:id="@+id/edit_suara_calon_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_below="@id/edit_jumlah_pemilih"/>
+
+            <TextView
+                android:id="@+id/edit_jumlah_suara_tidak_sah_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/edit_jumlah_pemilih"
+                android:layout_below="@+id/edit_suara_calon_layout"
+                android:layout_marginTop="14dp"
+                android:text="Jumlah suara tidak sah" />
+
+            <EditText
+                android:id="@+id/edit_jumlah_suara_tidak_sah"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text="787"
+                android:layout_below="@+id/edit_jumlah_suara_tidak_sah_label"
+                android:layout_alignStart="@+id/edit_jumlah_pemilih" />
+
+            <TextView
+                android:id="@+id/edit_bukti_foto_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bukti Foto"
+                android:layout_marginTop="14dp"
+                android:layout_below="@+id/edit_jumlah_suara_tidak_sah"
+                android:layout_alignStart="@+id/edit_jumlah_suara_tidak_sah" />
+
+            <ImageView
+                android:id="@+id/edit_bukti_foto_image"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:srcCompat="@drawable/upload_default"
+                android:layout_alignTop="@+id/edit_upload_photo_input_data_button"
+                android:layout_alignStart="@+id/edit_bukti_foto_label" />
+
+            <Button
+                android:id="@+id/edit_upload_photo_input_data_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edit_jumlah_suara_tidak_sah"
+                android:layout_alignStart="@id/edit_bukti_foto_image"
+                android:background="@color/colorAccent"
+                android:textColor="#ffffff"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="180dp"
+                android:text="Unggah"/>
+
+            <Button
+                android:id="@+id/edit_input_data_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edit_bukti_foto_image"
+                android:background="@color/colorAccent"
+                android:textColor="#ffffff"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:layout_centerHorizontal="true"
+                android:text="Kirim"/>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
